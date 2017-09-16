@@ -57,6 +57,10 @@ export const SME_OUTPUT_FORMATS: SourceMapExplorerOutputFormat = {
  * - Utilities
  */
 export class SeedConfig {
+
+  DEV_SERVICE_URL: string = 'http://ramasuspc:9090';
+  PROD_SERVICE_URL: string = 'http://services.ramasuspc.com:9090';
+
   /**
    * The port where the application will run.
    * The default port is `5555`, which can be overriden by the  `--port` flag when running `npm start`.
@@ -176,7 +180,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Welcome to angular-seed!';
+  APP_TITLE = 'Welcome to Yash and Angular 2';
 
   /**
    * Tracking ID.

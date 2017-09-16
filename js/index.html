@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src='../node_modules/socket.io-client/socket.io.js'></script>
+</head>
+
+<body>
+    <script type='text/javascript'>
+        var socketServerUrl = 'http://localhost:9090';
+        var socketClient = io.connect(socketServerUrl);
+
+        if (socketClient) {
+            socketClient.on('newCustomerRecord',
+                function (data) {
+                    console.log('Push Notification Received ... ' +
+                        JSON.stringify(data));
+                });
+        }
+    </script>
+</body>
+
+</html>
